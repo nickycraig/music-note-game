@@ -1,0 +1,25 @@
+body {
+    background-color: lightcyan;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+.rounds {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
