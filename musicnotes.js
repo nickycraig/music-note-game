@@ -1,15 +1,17 @@
 const roundNumber = document.querySelector('.round-number');
 const startButton = document.querySelector('.start');
 const nextButton = document.querySelector('.next');
-const letterButtons = document.querySelectorAll('letter-buttons');
 
-const buttonA = document.querySelector('.a');
-const buttonB = document.querySelector('.b');
-const buttonC = document.querySelector('.c');
-const buttonD = document.querySelector('.d');
-const buttonE = document.querySelector('.e');
-const buttonF = document.querySelector('.f');
-const buttonG = document.querySelector('.g');
+let letterButtons = document.querySelectorAll('.button');
+let arrayOfNotes[i] = document.querySelector('.note-images');
+
+const buttonA = document.querySelector('#a');
+const buttonB = document.querySelector('#b');
+const buttonC = document.querySelector('#c');
+const buttonD = document.querySelector('#d');
+const buttonE = document.querySelector('#e');
+const buttonF = document.querySelector('#f');
+const buttonG = document.querySelector('#g');
 
 const currentScore = document.querySelector('.score');
 const answerResponse = document.querySelector('.answer');
@@ -79,6 +81,8 @@ function startNewGame() {
     answerResponse.innerHTML = "";
     randomNote(arrayOfNotes);
 };
+
+
 
 // on click of letter button, the answer should register Correct or Incorrect, the score should update, and the image should change to another random note image.
 
