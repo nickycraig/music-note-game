@@ -3,7 +3,7 @@ const startButton = document.querySelector('.start');
 const nextButton = document.querySelector('.next');
 
 let letterButtons = document.querySelectorAll('.button');
-let arrayOfNotes[i] = document.querySelector('.note-images');
+// let noteImage = document.querySelector('.note-images').src=arrayOfNotes[i];
 
 const buttonA = document.querySelector('#a');
 const buttonB = document.querySelector('#b');
@@ -20,10 +20,14 @@ let arrayOfNotes = [];
 arrayOfNotes.push('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/23ZBz50.jpg', 'https://i.imgur.com/60DSSB1.jpg', 'https://i.imgur.com/YT4t0F9.jpg', 'https://i.imgur.com/In8nmPM.jpg', 'https://i.imgur.com/xeKCCvw.jpg', 'https://i.imgur.com/9llqpfY.jpg', 'https://i.imgur.com/zjzqsGF.jpg');
 
 function randomNote(arrayOfNotes) {
-    return arrayOfNotes[Math.floor(Math.random()*arrayOfNotes.length)];
+    return arrayOfNotes[Math.floor(Math.random() * arrayOfNotes.length)];
 };
 // console.log(randomNote(arrayOfNotes));
+// document.getElementById("imageid").src="function output here";
 
+function changeNoteImage() {
+    document.getElementById("note-images").src=arrayOfNotes[i];
+}
 
 let answerA = (arrayOfNotes[5], arrayOfNotes[12]);
 let answerB = arrayOfNotes[6];
@@ -50,7 +54,7 @@ function checkAnswer() {
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonD === answerD) {
+    if(buttonD == answerD) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
@@ -73,16 +77,30 @@ function checkAnswer() {
     else {
         answerResponse.innerHTML = "Rats! Missed it this time!"
     }
-    randomNote(arrayOfNotes);
+    changeNoteImage;
 };
 
+    
+let rounds = 0;
 function startNewGame() {
+    rounds = 1;
+    roundNumber.innerHTML = `Round ${rounds}`;
     currentScore.innerHTML = "Current Score 0 out of 10";
     answerResponse.innerHTML = "";
-    randomNote(arrayOfNotes);
+    changeNoteImage();
 };
 
+function startNewRound() {
+    rounds++;
+    roundNumber.innerHTML = `Round ${rounds}`;
+    currentScore.innerHTML = "Current Score 0 out of 10";
+    answerResponse.innerHTML = "";
+    changeNoteImage();
+}
 
+startButton.addEventListener('click', startNewGame);
+nextButton.addEventListener('click', startNewRound);
+buttonD.addEventListener('click', checkAnswer);
 
 // on click of letter button, the answer should register Correct or Incorrect, the score should update, and the image should change to another random note image.
 
