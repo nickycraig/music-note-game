@@ -3,7 +3,8 @@ const startButton = document.querySelector('.start');
 const nextButton = document.querySelector('.next');
 
 let letterButtons = document.querySelectorAll('.button');
-// let noteImage = document.querySelector('.note-images').src=arrayOfNotes[i];
+const noteImage = document.querySelector('.note-images');
+// noteImage.src = randomNote(arrayOfNotes);
 
 const buttonA = document.querySelector('#a');
 const buttonB = document.querySelector('#b');
@@ -23,33 +24,35 @@ function randomNote(arrayOfNotes) {
     return arrayOfNotes[Math.floor(Math.random() * arrayOfNotes.length)];
 };
 // console.log(randomNote(arrayOfNotes));
+
 // document.getElementById("imageid").src="function output here";
 
 function changeNoteImage() {
-    document.getElementById("note-images").src=arrayOfNotes[i];
+    document.getElementById("note-images").src=randomNote(arrayOfNotes);
+    // return noteImage.src;
 }
 
-let answerA = (arrayOfNotes[5], arrayOfNotes[12]);
-let answerB = arrayOfNotes[6];
-let answerC = (arrayOfNotes[0], arrayOfNotes[7]);
-let answerD = (arrayOfNotes[1], arrayOfNotes[8]);
-let answerE = (arrayOfNotes[2], arrayOfNotes[9]);
-let answerF = (arrayOfNotes[3], arrayOfNotes[10]);
-let answerG = (arrayOfNotes[4], arrayOfNotes[11]);
+const answerA = (arrayOfNotes[5], arrayOfNotes[12]);
+const answerB = arrayOfNotes[6];
+const answerC = (arrayOfNotes[0], arrayOfNotes[7]);
+const answerD = (arrayOfNotes[1], arrayOfNotes[8]);
+const answerE = (arrayOfNotes[2], arrayOfNotes[9]);
+const answerF = (arrayOfNotes[3], arrayOfNotes[10]);
+const answerG = (arrayOfNotes[4], arrayOfNotes[11]);
 
 let correctAnswers = 0;
 function checkAnswer() {
-    if(buttonA === answerA) {
+    if(buttonA == answerA) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonB === answerB) {
+    if(buttonB == answerB) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonC === answerC) {
+    if(buttonC == answerC) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
@@ -59,17 +62,17 @@ function checkAnswer() {
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonE === answerE) {
+    if(buttonE == answerE) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonF === answerF) {
+    if(buttonF == answerF) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonG === answerG) {
+    if(buttonG == answerG) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
@@ -77,7 +80,7 @@ function checkAnswer() {
     else {
         answerResponse.innerHTML = "Rats! Missed it this time!"
     }
-    changeNoteImage;
+    changeNoteImage();
 };
 
     
@@ -100,7 +103,13 @@ function startNewRound() {
 
 startButton.addEventListener('click', startNewGame);
 nextButton.addEventListener('click', startNewRound);
+buttonA.addEventListener('click', checkAnswer);
+buttonB.addEventListener('click', checkAnswer);
+buttonC.addEventListener('click', checkAnswer);
 buttonD.addEventListener('click', checkAnswer);
+buttonE.addEventListener('click', checkAnswer);
+buttonF.addEventListener('click', checkAnswer);
+buttonG.addEventListener('click', checkAnswer);
 
 // on click of letter button, the answer should register Correct or Incorrect, the score should update, and the image should change to another random note image.
 
