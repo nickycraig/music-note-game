@@ -1,5 +1,5 @@
 body {
-    background-color: lightcyan;
+    background-color: mediumturquoise;
 }
 
 h1, h4 {
@@ -24,13 +24,14 @@ h1, h4 {
 }
 
 .letter-buttons {
-    
+    /* background-color: deeppink; */
 }
 
 .button {
     font-size: 48px;
     padding: 16px;
     border-radius: 12px;
+    background-color: fuchsia;
 }
 
 .scoreboard {

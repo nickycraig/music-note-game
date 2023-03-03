@@ -14,6 +14,14 @@ const buttonE = document.querySelector('#e');
 const buttonF = document.querySelector('#f');
 const buttonG = document.querySelector('#g');
 
+// const buttonA = document.getElementById('a').src=('https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/zjzqsGF.jpg');
+// const buttonB = document.getElementById('b').src='https://i.imgur.com/23ZBz50.jpg'
+// const buttonC = document.getElementById('c').src=('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/60DSSB1.jpg');
+// const buttonD = document.getElementById('d').src=('https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/YT4t0F9.jpg');
+// const buttonE = document.getElementById('e').src=('https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/In8nmPM.jpg');
+// const buttonF = document.getElementById('f').src=('https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/xeKCCvw.jpg');
+// const buttonG = document.getElementById('g').src=('https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/9llqpfY.jpg');
+
 const currentScore = document.querySelector('.score');
 const answerResponse = document.querySelector('.answer');
 
@@ -24,13 +32,12 @@ function randomNote(arrayOfNotes) {
     return arrayOfNotes[Math.floor(Math.random() * arrayOfNotes.length)];
 };
 // console.log(randomNote(arrayOfNotes));
-
 // document.getElementById("imageid").src="function output here";
 
 function changeNoteImage() {
     document.getElementById("note-images").src=randomNote(arrayOfNotes);
     // return noteImage.src;
-}
+};
 
 const answerA = (arrayOfNotes[5], arrayOfNotes[12]);
 const answerB = arrayOfNotes[6];
@@ -42,37 +49,37 @@ const answerG = (arrayOfNotes[4], arrayOfNotes[11]);
 
 let correctAnswers = 0;
 function checkAnswer() {
-    if(buttonA == answerA) {
+    if(buttonA === answerA) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonB == answerB) {
+    if(buttonB === answerB) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonC == answerC) {
+    if(buttonC === answerC) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonD == answerD) {
+    if(buttonD === answerD) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonE == answerE) {
+    if(buttonE === answerE) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonF == answerF) {
+    if(buttonF === answerF) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
     }
-    if(buttonG == answerG) {
+    if(buttonG === answerG) {
         correctAnswers++;
         currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
         answerResponse.innerHTML = "Answer: Correct!"
