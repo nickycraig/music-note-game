@@ -39,54 +39,93 @@ function changeNoteImage() {
     // return noteImage.src;
 };
 
-const answerA = (arrayOfNotes[5], arrayOfNotes[12]);
-const answerB = arrayOfNotes[6];
-const answerC = (arrayOfNotes[0], arrayOfNotes[7]);
-const answerD = (arrayOfNotes[1], arrayOfNotes[8]);
-const answerE = (arrayOfNotes[2], arrayOfNotes[9]);
-const answerF = (arrayOfNotes[3], arrayOfNotes[10]);
-const answerG = (arrayOfNotes[4], arrayOfNotes[11]);
+const answerA = [arrayOfNotes[5], arrayOfNotes[12]];
+const answerB = [arrayOfNotes[6]];
+const answerC = [arrayOfNotes[0], arrayOfNotes[7]];
+const answerD = [arrayOfNotes[1], arrayOfNotes[8]];
+const answerE = [arrayOfNotes[2], arrayOfNotes[9]];
+const answerF = [arrayOfNotes[3], arrayOfNotes[10]];
+const answerG = [arrayOfNotes[4], arrayOfNotes[11]];
 
 let correctAnswers = 0;
 function checkAnswer() {
-    if(buttonA === answerA) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    const selectedNote = this.innerText;
+    // console.log(selectedNote);
+    if(selectedNote === "A") {
+        // console.log(document.getElementById("note-images").src);
+        // console.log(answerA.includes(document.getElementById("note-images").src));
+        if(answerA.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonB === answerB) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if(selectedNote === "B") {
+        if(answerB.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonC === answerC) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if(selectedNote === "C") {
+        if(answerC.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonD === answerD) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if(selectedNote === "D") {
+        if(answerD.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonE === answerE) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if (selectedNote === "E") {
+        if(answerE.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonF === answerF) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if(selectedNote === "F") {
+        if(answerF.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     }
-    if(buttonG === answerG) {
-        correctAnswers++;
-        currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
-        answerResponse.innerHTML = "Answer: Correct!"
+    if(selectedNote === "G") {
+        if(answerG.includes(document.getElementById("note-images").src)) {
+            correctAnswers++;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            answerResponse.innerHTML = "Answer: Correct!"
+        } 
+        else {
+            answerResponse.innerHTML = "Rats! Missed it this time!"
+        }
     } 
-    else {
-        answerResponse.innerHTML = "Rats! Missed it this time!"
-    }
+    // else {
+    //     answerResponse.innerHTML = "Rats! Missed it this time!"
+    // }
     changeNoteImage();
 };
 
@@ -119,6 +158,8 @@ buttonF.addEventListener('click', checkAnswer);
 buttonG.addEventListener('click', checkAnswer);
 
 // on click of letter button, the answer should register Correct or Incorrect, the score should update, and the image should change to another random note image.
+
+// I need to add something that makes the round end at 10 slides. Create a scoreboard or something to log the score of each round and the slide changes to 
 
 // console.log(arrayOfNotes);
 // console.log(arrayOfNotes[0], arrayOfNotes[6]);
