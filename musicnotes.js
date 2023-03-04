@@ -4,7 +4,6 @@ const nextButton = document.querySelector('.next');
 
 let letterButtons = document.querySelectorAll('.button');
 const noteImage = document.querySelector('.note-images');
-// noteImage.src = randomNote(arrayOfNotes);
 
 const buttonA = document.querySelector('#a');
 const buttonB = document.querySelector('#b');
@@ -14,16 +13,9 @@ const buttonE = document.querySelector('#e');
 const buttonF = document.querySelector('#f');
 const buttonG = document.querySelector('#g');
 
-// const buttonA = document.getElementById('a').src=('https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/zjzqsGF.jpg');
-// const buttonB = document.getElementById('b').src='https://i.imgur.com/23ZBz50.jpg'
-// const buttonC = document.getElementById('c').src=('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/60DSSB1.jpg');
-// const buttonD = document.getElementById('d').src=('https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/YT4t0F9.jpg');
-// const buttonE = document.getElementById('e').src=('https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/In8nmPM.jpg');
-// const buttonF = document.getElementById('f').src=('https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/xeKCCvw.jpg');
-// const buttonG = document.getElementById('g').src=('https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/9llqpfY.jpg');
-
 const currentScore = document.querySelector('.score');
 const answerResponse = document.querySelector('.answer');
+const listOfTotals = document.querySelector('.totals');
 
 let arrayOfNotes = [];
 arrayOfNotes.push('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/23ZBz50.jpg', 'https://i.imgur.com/60DSSB1.jpg', 'https://i.imgur.com/YT4t0F9.jpg', 'https://i.imgur.com/In8nmPM.jpg', 'https://i.imgur.com/xeKCCvw.jpg', 'https://i.imgur.com/9llqpfY.jpg', 'https://i.imgur.com/zjzqsGF.jpg');
@@ -137,6 +129,7 @@ function startNewGame() {
     currentScore.innerHTML = "Current Score 0 out of 10";
     answerResponse.innerHTML = "";
     changeNoteImage();
+    correctAnswers = 0;
 };
 
 function startNewRound() {
@@ -145,6 +138,30 @@ function startNewRound() {
     currentScore.innerHTML = "Current Score 0 out of 10";
     answerResponse.innerHTML = "";
     changeNoteImage();
+    correctAnswers = 0;
+}
+
+function appendScoreTotals() {
+    let newTotalLi = document.createElement('li');
+    newTotalLi.innerHTML = `Round ${rounds}: ${correctAnswers}`;
+    newTotalLi.classList.add('new-total');
+    listOfTotals.appendChild(newTotalLi);
+}
+// let newCatLi = document.createElement('li');
+// newCatLi.innerHTML = newCatInput.value;
+// newCatLi.classList.add('cat');
+// listOfCats.appendChild(newCatLi);
+// newCatInput.value = '';
+// totalCats++;
+// catHeading.innerHTML = `My list of ${totalCats} cats:`
+
+let gamePlay = true;
+for(let i = 0; i < arrayOfNotes.length; i++) {
+    if(i >= 10) {
+        gamePlay = false;
+
+    }
+
 }
 
 startButton.addEventListener('click', startNewGame);
@@ -156,8 +173,6 @@ buttonD.addEventListener('click', checkAnswer);
 buttonE.addEventListener('click', checkAnswer);
 buttonF.addEventListener('click', checkAnswer);
 buttonG.addEventListener('click', checkAnswer);
-
-// on click of letter button, the answer should register Correct or Incorrect, the score should update, and the image should change to another random note image.
 
 // I need to add something that makes the round end at 10 slides. Create a scoreboard or something to log the score of each round and the slide changes to 
 
