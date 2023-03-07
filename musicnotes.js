@@ -15,6 +15,7 @@ const buttonG = document.querySelector('#g');
 
 const currentScore = document.querySelector('.score');
 const answerResponse = document.querySelector('.answer');
+const noteCounter = document.querySelector('note-counter');
 const listOfTotals = document.querySelector('.totals');
 
 let arrayOfNotes = [];
@@ -39,15 +40,18 @@ const answerE = [arrayOfNotes[2], arrayOfNotes[9]];
 const answerF = [arrayOfNotes[3], arrayOfNotes[10]];
 const answerG = [arrayOfNotes[4], arrayOfNotes[11]];
 
+let turns = 1;
 let correctAnswers = 0;
 function checkAnswer() {
     const selectedNote = this.innerText;
     // console.log(selectedNote);
-    if(selectedNote === "A") {
+    if(selectedNote === "A" && turns <= 10) {
         // console.log(document.getElementById("note-images").src);
         // console.log(answerA.includes(document.getElementById("note-images").src));
         if(answerA.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
@@ -120,11 +124,11 @@ function checkAnswer() {
     // }
     changeNoteImage();
 };
-
     
 let rounds = 0;
 function startNewGame() {
     rounds = 1;
+    noteCounter.innerHTML = "Mystery Note 1";
     roundNumber.innerHTML = `Round ${rounds}`;
     currentScore.innerHTML = "Current Score 0 out of 10";
     answerResponse.innerHTML = "";
@@ -143,26 +147,29 @@ function startNewRound() {
 
 function appendScoreTotals() {
     let newTotalLi = document.createElement('li');
+    console.log(newTotalLi);
     newTotalLi.innerHTML = `Round ${rounds}: ${correctAnswers}`;
     newTotalLi.classList.add('new-total');
     listOfTotals.appendChild(newTotalLi);
-}
-// let newCatLi = document.createElement('li');
-// newCatLi.innerHTML = newCatInput.value;
-// newCatLi.classList.add('cat');
-// listOfCats.appendChild(newCatLi);
-// newCatInput.value = '';
-// totalCats++;
-// catHeading.innerHTML = `My list of ${totalCats} cats:`
+};
 
 let gamePlay = true;
-for(let i = 0; i < arrayOfNotes.length; i++) {
-    if(i >= 10) {
-        gamePlay = false;
+// let roundLength = 0; 
+// while(gamePlay) {
+//     if(roundLength === arrayOfNotes.length - 3)
+//     roundLength = false
+//     appendScoreTotals()
+//     startNewRound()
+// };
 
-    }
+// let gamePlay = true;
+// for(let i = 0; i < arrayOfNotes.length; i++) {
+//     if(i >= 10) {
+//         gamePlay = false;
+//     } appendScoreTotals ();
+//     startNewRound();
 
-}
+// }
 
 startButton.addEventListener('click', startNewGame);
 nextButton.addEventListener('click', startNewRound);
