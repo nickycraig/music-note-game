@@ -24,12 +24,9 @@ arrayOfNotes.push('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/36HTzZ
 function randomNote(arrayOfNotes) {
     return arrayOfNotes[Math.floor(Math.random() * arrayOfNotes.length)];
 };
-// console.log(randomNote(arrayOfNotes));
-// document.getElementById("imageid").src="function output here";
 
 function changeNoteImage() {
     document.getElementById("note-images").src=randomNote(arrayOfNotes);
-    // return noteImage.src;
 };
 
 const answerA = [arrayOfNotes[5], arrayOfNotes[12]];
@@ -40,24 +37,26 @@ const answerE = [arrayOfNotes[2], arrayOfNotes[9]];
 const answerF = [arrayOfNotes[3], arrayOfNotes[10]];
 const answerG = [arrayOfNotes[4], arrayOfNotes[11]];
 
-let turns = 0;
-function endRound() {
-    checkAnswer();
-    console.log(checkAnswer);
-    if(turns < 10) {
-        // checkAnswer();
-        turns++;
-        noteCounter.innerHTML = `Mystery Note ${turns}`;
-    }
-    if(turns >= 10) {
-        // checkAnswer();
-        noteCounter.innerHTML = `Mystery Note ${turns}`;
-        roundNumber.innerHTML = `End of Round ${rounds}!`;
-        appendScoreTotals();
-    }
-    changeNoteImage();
-};
+// let turns = 0;
+// let correctAnswers = 0;
+// function checkAnswer() {
+//     checkAnswer();
+//     turns++;
 
+//     // if(turns < 10) {
+//     //     // checkAnswer();
+//     //     // turns++;
+//     //     noteCounter.innerHTML = `Mystery Note ${turns}`;
+//     // }
+//     // if(turns >= 10) {
+//     //     // checkAnswer();
+//     //     noteCounter.innerHTML = `Mystery Note ${turns}`;
+//     //     roundNumber.innerHTML = `End of Round ${rounds}!`;
+//     //     appendScoreTotals();
+//     // }
+//     changeNoteImage();
+// };
+let turns = 0;
 let correctAnswers = 0;
 function checkAnswer() {
     const selectedNote = this.innerText;
@@ -67,105 +66,106 @@ function checkAnswer() {
         // console.log(answerA.includes(document.getElementById("note-images").src));
         if(answerA.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if(selectedNote === "B") {
         if(answerB.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if(selectedNote === "C") {
         if(answerC.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if(selectedNote === "D") {
         if(answerD.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if (selectedNote === "E") {
         if(answerE.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if(selectedNote === "F") {
         if(answerF.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
     if(selectedNote === "G") {
         if(answerG.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
-            // turns++;
-            // noteCounter.innerHTML = `Mystery Note ${turns}`;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     } 
     // else {
     //     answerResponse.innerHTML = "Rats! Missed it this time!"
     // }
-    // changeNoteImage();
+    changeNoteImage();
 };
     
 let rounds = 0;
@@ -174,7 +174,7 @@ function startNewGame() {
     turns = 1;
     noteCounter.innerHTML = "Mystery Note 1";
     roundNumber.innerHTML = `Round ${rounds}`;
-    currentScore.innerHTML = "Current Score 0 out of 10";
+    currentScore.innerHTML = "Current Score";
     answerResponse.innerHTML = "";
     changeNoteImage();
     correctAnswers = 0;
@@ -185,7 +185,7 @@ function startNewRound() {
     turns = 1;
     noteCounter.innerHTML = "Mystery Note 1";
     roundNumber.innerHTML = `Round ${rounds}`;
-    currentScore.innerHTML = "Current Score 0 out of 10";
+    currentScore.innerHTML = "Current Score";
     answerResponse.innerHTML = "";
     changeNoteImage();
     correctAnswers = 0;
@@ -219,18 +219,12 @@ function appendScoreTotals() {
 
 startButton.addEventListener('click', startNewGame);
 nextButton.addEventListener('click', startNewRound);
-buttonA.addEventListener('click', endRound);
-buttonB.addEventListener('click', endRound);
-buttonC.addEventListener('click', endRound);
-buttonD.addEventListener('click', endRound);
-buttonE.addEventListener('click', endRound);
-buttonF.addEventListener('click', endRound);
-buttonG.addEventListener('click', endRound);
+buttonA.addEventListener('click', checkAnswer);
+buttonB.addEventListener('click', checkAnswer);
+buttonC.addEventListener('click', checkAnswer);
+buttonD.addEventListener('click', checkAnswer);
+buttonE.addEventListener('click', checkAnswer);
+buttonF.addEventListener('click', checkAnswer);
+buttonG.addEventListener('click', checkAnswer);
 
 // I need to add something that makes the round end at 10 slides. Create a scoreboard or something to log the score of each round and the slide changes to 
-
-// console.log(arrayOfNotes);
-// console.log(arrayOfNotes[0], arrayOfNotes[6]);
-
-// let answerA = (arrayOfNotes[5] || arrayOfNotes[12]);
-// console.log(answerA);
