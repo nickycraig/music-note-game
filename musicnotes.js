@@ -15,7 +15,7 @@ const buttonG = document.querySelector('#g');
 
 const currentScore = document.querySelector('.score');
 const answerResponse = document.querySelector('.answer');
-const noteCounter = document.querySelector('note-counter');
+const noteCounter = document.querySelector('.note-counter');
 const listOfTotals = document.querySelector('.totals');
 
 let arrayOfNotes = [];
@@ -45,7 +45,7 @@ let correctAnswers = 0;
 function checkAnswer() {
     const selectedNote = this.innerText;
     // console.log(selectedNote);
-    if(selectedNote === "A" && turns <= 10) {
+    if(selectedNote === "A" && turns < 10) {
         // console.log(document.getElementById("note-images").src);
         // console.log(answerA.includes(document.getElementById("note-images").src));
         if(answerA.includes(document.getElementById("note-images").src)) {
@@ -56,66 +56,92 @@ function checkAnswer() {
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if(selectedNote === "B") {
+    if(selectedNote === "B" && turns < 10) {
         if(answerB.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if(selectedNote === "C") {
+    if(selectedNote === "C" && turns < 10) {
         if(answerC.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if(selectedNote === "D") {
+    if(selectedNote === "D" && turns < 10) {
         if(answerD.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if (selectedNote === "E") {
+    if (selectedNote === "E" && turns < 10) {
         if(answerE.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if(selectedNote === "F") {
+    if(selectedNote === "F" && turns < 10) {
         if(answerF.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
-    if(selectedNote === "G") {
+    if(selectedNote === "G" && turns < 10) {
         if(answerG.includes(document.getElementById("note-images").src)) {
             correctAnswers++;
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of 10`;
             answerResponse.innerHTML = "Answer: Correct!"
         } 
         else {
+            turns++;
+            noteCounter.innerHTML = `Mystery Note ${turns}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     } 
