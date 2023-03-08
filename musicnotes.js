@@ -1,6 +1,7 @@
 const roundNumber = document.querySelector('.round-number');
 const startButton = document.querySelector('.start');
 const nextButton = document.querySelector('.next');
+const previousScore = document.querySelector('.previous-round');
 
 const letterButtons = document.querySelectorAll('.button');
 const noteImage = document.querySelector('.note-images');
@@ -56,6 +57,7 @@ const answerG = [arrayOfNotes[4], arrayOfNotes[11]];
 //     // }
 //     changeNoteImage();
 // };
+
 let turns = 0;
 let correctAnswers = 0;
 function checkAnswer() {
@@ -74,6 +76,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns - 1}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -88,6 +91,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns - 1}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -102,6 +106,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -116,6 +121,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -130,6 +136,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -144,6 +151,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     }
@@ -158,7 +166,7 @@ function checkAnswer() {
         else {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
-            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns}`;
+            currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
             answerResponse.innerHTML = "Rats! Missed it this time!"
         }
     } 
@@ -181,6 +189,11 @@ function startNewGame() {
 };
 
 function startNewRound() {
+    let previousScoreTotal = document.createElement('li');
+    previousScoreTotal.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns - 1}`;
+    previousScoreTotal.classList.add('previous-round');
+    listOfTotals.appendChild(previousScoreTotal);
+    // previousScore.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns - 1}`;
     rounds++;
     turns = 1;
     noteCounter.innerHTML = "Mystery Note 1";
@@ -191,31 +204,13 @@ function startNewRound() {
     correctAnswers = 0;
 }
 
-function appendScoreTotals() {
-    let newTotalLi = document.createElement('li');
-    console.log(newTotalLi);
-    newTotalLi.innerHTML = `Round ${rounds}: ${correctAnswers}`;
-    newTotalLi.classList.add('new-total');
-    listOfTotals.appendChild(newTotalLi);
-};
-
-// let gamePlay = true;
-// let roundLength = 0; 
-// while(gamePlay) {
-//     if(roundLength === arrayOfNotes.length - 3)
-//     roundLength = false
-//     appendScoreTotals()
-//     startNewRound()
+// function appendScoreTotals() {
+//     let newTotalLi = document.createElement('li');
+//     // console.log(newTotalLi);
+//     newTotalLi.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns}`;
+//     newTotalLi.classList.add('new-total');
+//     listOfTotals.appendChild(newTotalLi);
 // };
-
-// let gamePlay = true;
-// for(let i = 0; i < arrayOfNotes.length; i++) {
-//     if(i >= 10) {
-//         gamePlay = false;
-//     } appendScoreTotals ();
-//     startNewRound();
-
-// }
 
 startButton.addEventListener('click', startNewGame);
 nextButton.addEventListener('click', startNewRound);
@@ -227,4 +222,4 @@ buttonE.addEventListener('click', checkAnswer);
 buttonF.addEventListener('click', checkAnswer);
 buttonG.addEventListener('click', checkAnswer);
 
-// I need to add something that makes the round end at 10 slides. Create a scoreboard or something to log the score of each round and the slide changes to 
+
