@@ -10,10 +10,13 @@ h1, h4 {
 
 h1 {
     font-size: 6vw;
+    letter-spacing: 1px;
+    margin-bottom: -6px;
 }
 
 h4 {
     font-size: 2.2vw;
+    margin-top: 5px;
 }
 
 main {
@@ -36,8 +39,10 @@ img {
 }
 
 .start, .next {
-    font-size: 16px;
-    /* padding: 6px 12px 6px 12px !important; */
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 18px;
+    padding: 6px;
+    margin: 14px;
     border-radius: 10px;
     background-color: black;
     color: white;
@@ -45,26 +50,51 @@ img {
 
 .game-play {
     width: 75vw;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; */
-    /* align-items: center; */
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; */
 }
 
 .notes {
     background-color: white;
     margin-top: 10px;
     margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-style: solid;
     border-color: black;
-    
+}
+
+/* .letter-buttons {
+    max-width: 100%;
+    height: auto;
+} */
+
+.mystery-note {
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.note-counter {
+    font-size: 2.75vw;
+    margin-bottom: -4px;
+}
+
+.answer {
+    font-size: 2.4vw;
 }
 
 .button {
-    font-size: 38px;
-    padding: 11px 16px;
-    margin: 9px;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 40px;
+    padding: 14px;
+    margin: 12px;
+    max-width: 100%;
+    height: auto;
+    /* width: 100%; */
     border-radius: 12px;
+    border-color: black;
     background-color: fuchsia;
 }
 
@@ -75,7 +105,26 @@ img {
     border-style: solid;
     border-color: black;
     margin: 10px;
+    margin-bottom: 34px;
     /* display: flex;
     flex-direction: column; */
     /* justify-content: right; */
+}
+
+.scores {
+    font-size: 2.5vw;
+    letter-spacing: 1.1px;
+}
+
+.current-score {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.8vw;
+}
+
+.totals {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.65vw;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

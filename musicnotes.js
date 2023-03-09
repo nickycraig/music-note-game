@@ -14,7 +14,7 @@ const buttonE = document.querySelector('#e');
 const buttonF = document.querySelector('#f');
 const buttonG = document.querySelector('#g');
 
-const currentScore = document.querySelector('.score');
+const currentScore = document.querySelector('.current-score');
 const answerResponse = document.querySelector('.answer');
 const noteCounter = document.querySelector('.note-counter');
 const listOfTotals = document.querySelector('.totals');
@@ -37,26 +37,6 @@ const answerD = [arrayOfNotes[1], arrayOfNotes[8], arrayOfNotes[19]];
 const answerE = [arrayOfNotes[2], arrayOfNotes[9], arrayOfNotes[18], arrayOfNotes[25]];
 const answerF = [arrayOfNotes[3], arrayOfNotes[10], arrayOfNotes[17], arrayOfNotes[24]];
 const answerG = [arrayOfNotes[4], arrayOfNotes[11], arrayOfNotes[16], arrayOfNotes[23]];
-
-// let turns = 0;
-// let correctAnswers = 0;
-// function checkAnswer() {
-//     checkAnswer();
-//     turns++;
-
-//     // if(turns < 10) {
-//     //     // checkAnswer();
-//     //     // turns++;
-//     //     noteCounter.innerHTML = `Mystery Note ${turns}`;
-//     // }
-//     // if(turns >= 10) {
-//     //     // checkAnswer();
-//     //     noteCounter.innerHTML = `Mystery Note ${turns}`;
-//     //     roundNumber.innerHTML = `End of Round ${rounds}!`;
-//     //     appendScoreTotals();
-//     // }
-//     changeNoteImage();
-// };
 
 let turns = 0;
 let correctAnswers = 0;
@@ -191,7 +171,7 @@ function startNewGame() {
 
 function startNewRound() {
     let previousScoreTotal = document.createElement('li');
-    previousScoreTotal.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns - 1}`;
+    previousScoreTotal.innerHTML = `Round ${rounds}:  <b>${correctAnswers} out of ${turns - 1}</b>`;
     previousScoreTotal.classList.add('previous-round');
     listOfTotals.appendChild(previousScoreTotal);
     // previousScore.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns - 1}`;
