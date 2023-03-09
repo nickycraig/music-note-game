@@ -73,15 +73,17 @@ img {
 
 .mystery-note {
     text-align: center;
-    font-family: 'Gill Sans', sans-serif;
+    
 }
 
 .note-counter {
-    font-size: 2.75vw;
+    font-family: impact, sans-serif;
+    font-size: 2.9vw;
     margin-bottom: -4px;
 }
 
 .answer {
+    font-family: 'Gill Sans', sans-serif;
     font-size: 2.4vw;
 }
 

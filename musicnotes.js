@@ -171,7 +171,7 @@ function startNewGame() {
 
 function startNewRound() {
     let previousScoreTotal = document.createElement('li');
-    previousScoreTotal.innerHTML = `Round ${rounds}:  <b>${correctAnswers} out of ${turns - 1}</b>`;
+    previousScoreTotal.innerHTML = `<b>Round ${rounds}:</b>  ${correctAnswers} out of ${turns - 1}`;
     previousScoreTotal.classList.add('previous-round');
     listOfTotals.appendChild(previousScoreTotal);
     // previousScore.innerHTML = `Round ${rounds}: ${correctAnswers} out of ${turns - 1}`;
