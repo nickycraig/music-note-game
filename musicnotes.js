@@ -20,7 +20,7 @@ const noteCounter = document.querySelector('.note-counter');
 const listOfTotals = document.querySelector('.totals');
 
 let arrayOfNotes = [];
-arrayOfNotes.push('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/23ZBz50.jpg', 'https://i.imgur.com/60DSSB1.jpg', 'https://i.imgur.com/YT4t0F9.jpg', 'https://i.imgur.com/In8nmPM.jpg', 'https://i.imgur.com/xeKCCvw.jpg', 'https://i.imgur.com/9llqpfY.jpg', 'https://i.imgur.com/zjzqsGF.jpg');
+arrayOfNotes.push('https://i.imgur.com/qfvIYj2.jpg', 'https://i.imgur.com/36HTzZP.jpg', 'https://i.imgur.com/spOtQVI.jpg', 'https://i.imgur.com/o6ipQUI.jpg', 'https://i.imgur.com/VF6Kc7i.jpg', 'https://i.imgur.com/vW8lh5l.jpg', 'https://i.imgur.com/23ZBz50.jpg', 'https://i.imgur.com/60DSSB1.jpg', 'https://i.imgur.com/YT4t0F9.jpg', 'https://i.imgur.com/In8nmPM.jpg', 'https://i.imgur.com/xeKCCvw.jpg', 'https://i.imgur.com/9llqpfY.jpg', 'https://i.imgur.com/zjzqsGF.jpg', 'https://i.imgur.com/x2jTrQp.jpg', 'https://i.imgur.com/2iBlaRb.jpg', 'https://i.imgur.com/DugHx4k.jpg', 'https://i.imgur.com/OVYyr41.jpg', 'https://i.imgur.com/ZdU9zwy.jpg', 'https://i.imgur.com/ZlbVZjI.jpg', 'https://i.imgur.com/QgfAnVN.jpg', 'https://i.imgur.com/pKCvNnY.jpg', 'https://i.imgur.com/v98dCbh.jpg', 'https://i.imgur.com/OIo87FM.jpg', 'https://i.imgur.com/oxMyF5v.jpg', 'https://i.imgur.com/s2wFbVN.jpg', 'https://i.imgur.com/Ff8W5QA.jpg');
 
 function randomNote(arrayOfNotes) {
     return arrayOfNotes[Math.floor(Math.random() * arrayOfNotes.length)];
@@ -30,13 +30,13 @@ function changeNoteImage() {
     document.getElementById("note-images").src=randomNote(arrayOfNotes);
 };
 
-const answerA = [arrayOfNotes[5], arrayOfNotes[12]];
-const answerB = [arrayOfNotes[6]];
-const answerC = [arrayOfNotes[0], arrayOfNotes[7]];
-const answerD = [arrayOfNotes[1], arrayOfNotes[8]];
-const answerE = [arrayOfNotes[2], arrayOfNotes[9]];
-const answerF = [arrayOfNotes[3], arrayOfNotes[10]];
-const answerG = [arrayOfNotes[4], arrayOfNotes[11]];
+const answerA = [arrayOfNotes[5], arrayOfNotes[12], arrayOfNotes[15], arrayOfNotes[22]];
+const answerB = [arrayOfNotes[6], arrayOfNotes[14], arrayOfNotes[21]];
+const answerC = [arrayOfNotes[0], arrayOfNotes[7], arrayOfNotes[13], arrayOfNotes[20]];
+const answerD = [arrayOfNotes[1], arrayOfNotes[8], arrayOfNotes[19]];
+const answerE = [arrayOfNotes[2], arrayOfNotes[9], arrayOfNotes[18], arrayOfNotes[25]];
+const answerF = [arrayOfNotes[3], arrayOfNotes[10], arrayOfNotes[17], arrayOfNotes[24]];
+const answerG = [arrayOfNotes[4], arrayOfNotes[11], arrayOfNotes[16], arrayOfNotes[23]];
 
 // let turns = 0;
 // let correctAnswers = 0;
@@ -71,7 +71,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Aw yeah! Correct!"
         } 
         else {
             turns++;
@@ -86,7 +86,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Fabulous job! Correct!"
         } 
         else {
             turns++;
@@ -101,7 +101,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Great work! Correct!"
         } 
         else {
             turns++;
@@ -116,7 +116,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Teriffic! Correct!"
         } 
         else {
             turns++;
@@ -131,7 +131,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Wowee! Correct!"
         } 
         else {
             turns++;
@@ -146,7 +146,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "Nailed it! Correct!"
         } 
         else {
             turns++;
@@ -161,7 +161,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Answer: Correct!"
+            answerResponse.innerHTML = "You rule! Correct!"
         } 
         else {
             turns++;
@@ -184,6 +184,7 @@ function startNewGame() {
     roundNumber.innerHTML = `Round ${rounds}`;
     currentScore.innerHTML = "Current Score";
     answerResponse.innerHTML = "";
+    // listOfTotals.innerHTML = "";
     changeNoteImage();
     correctAnswers = 0;
 };

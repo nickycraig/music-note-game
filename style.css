@@ -1,9 +1,19 @@
 body {
-    background-color: mediumturquoise;
+    background-color: paleturquoise;
+    font-family: impact, sans-serif;
 }
 
 h1, h4 {
     text-align: center;
+    /* background-color: ; */
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+h4 {
+    font-size: 2.2vw;
 }
 
 main {
@@ -16,9 +26,21 @@ main {
     justify-content: space-evenly;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.round-number {
+    font-size: 3vw;
+}
+
 .start, .next {
-    font-size: 20px;
+    font-size: 16px;
+    /* padding: 6px 12px 6px 12px !important; */
     border-radius: 10px;
+    background-color: black;
+    color: white;
 }
 
 .game-play {
@@ -29,9 +51,18 @@ main {
     /* align-items: center; */
 }
 
+.notes {
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-style: solid;
+    border-color: black;
+    
+}
+
 .button {
-    font-size: 48px;
-    padding: 16px;
+    font-size: 38px;
+    padding: 11px 16px;
     margin: 9px;
     border-radius: 12px;
     background-color: fuchsia;
@@ -39,6 +70,11 @@ main {
 
 .scoreboard {
     width: 25vw;
+    background-color: lightpink;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
     /* display: flex;
     flex-direction: column; */
     /* justify-content: right; */
