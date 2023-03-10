@@ -51,7 +51,7 @@ function checkAnswer() {
             turns++;
             noteCounter.innerHTML = `Mystery Note ${turns}`;
             currentScore.innerHTML = `Current Score: ${correctAnswers} out of ${turns - 1}`;
-            answerResponse.innerHTML = "Aw yeah! Correct!"
+            answerResponse.innerHTML = "Awww yeah! Correct!"
         } 
         else {
             turns++;

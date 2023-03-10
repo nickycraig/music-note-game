@@ -15,7 +15,8 @@ h1 {
 }
 
 h4 {
-    font-size: 2.2vw;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.9vw;
     margin-top: 5px;
     margin-bottom: 20px;
 }
@@ -41,7 +42,7 @@ img {
 
 .start, .next {
     font-family: 'Gill Sans', sans-serif;
-    font-size: 1.7vw;
+    font-size: 1.8vw;
     padding: 1%;
     margin: 4%;
     border-radius: 10px;
