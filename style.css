@@ -41,10 +41,9 @@ img {
 
 .start, .next {
     font-family: 'Gill Sans', sans-serif;
-    font-size: 18px;
-    padding: 5px;
-    padding-top: 4px;
-    margin: 20px;
+    font-size: 1.7vw;
+    padding: 1%;
+    margin: 4%;
     border-radius: 10px;
     background-color: black;
     color: white;
@@ -91,11 +90,12 @@ img {
 
 .button {
     font-family: 'Gill Sans', sans-serif;
-    font-size: 40px;
-    padding: 14px;
-    margin: 12px;
-    max-width: 100%;
-    height: auto;
+    font-size: 3.85vw;
+    padding: 1.8%;
+    margin: 2%;
+    width: 5.8vw;
+    /* max-width: 100%;
+    height: auto; */
     /* width: 100%; */
     border-radius: 12px;
     border-color: black;
